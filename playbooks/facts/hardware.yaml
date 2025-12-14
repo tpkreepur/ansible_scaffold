@@ -1,0 +1,11 @@
+# facts/hardware.yaml
+---
+- name: Hardware info
+  hosts: all
+  gather_facts: true
+  gather_subset:
+    - hardware
+  tasks:
+    - name: Hardware facts
+      ansible.builtin.debug:
+        var: ansible_facts
