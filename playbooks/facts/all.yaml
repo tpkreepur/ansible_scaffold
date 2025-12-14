@@ -1,0 +1,8 @@
+# facts/all.yaml
+---
+- name: Display all facts
+  hosts: all
+  tasks:
+    - name: Print all gathered facts
+      debug:
+        var: ansible_facts
